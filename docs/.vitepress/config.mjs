@@ -6,6 +6,7 @@ export default defineConfig({
   description: "A VitePress Site",
   head: [['link', { rel: 'icon', href: '/rabbit-h5-doc/favicon.ico' }]], 
   base: '/rabbit-h5-doc/', // 使用相对路径，线上部署非根路径时需要修改
+  ignoreDeadLinks: true, // 忽略死链接
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -14,7 +15,6 @@ export default defineConfig({
       { text: '前端笔记', link: 'http://150.158.175.93:8268/doc/' }
     ],
     logo: '/image.png',
-
     search: {
       provider: 'local', // 可以开启本地搜索
     },
